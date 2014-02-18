@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/ITEST_CONTRACTOR/!svn/ver/33/trunk/iTest/base
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ITEST_CONTRACTOR/!svn/ver/33/trunk/iTest/base/__init__.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ITEST_CONTRACTOR/!svn/ver/33/trunk/iTest/base/models.py
+END

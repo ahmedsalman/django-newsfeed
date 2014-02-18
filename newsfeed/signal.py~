@@ -1,0 +1,24 @@
+from django.db.models import signals
+from django.contrib.auth.models import User
+from aceprofile.models import AceProfile
+from ipstore.models import *
+
+
+def update_item(instance, raw, created, **kwargs):
+    if created:
+        item = StreamItem()
+        item.content_type = ContentType.objects.get_for_model(type(instance))
+        item.object_id = instance.id
+        item.actor = instance.created_by
+        try:
+            item.actor_profile = AceProfile.objects.get( profile_owner = instance.created_by )
+        except AceProfile.DoesNotExist:
+            pass
+        item.save()
+
+
+signals.post_save.connect(update_item, Ip)
+signals.post_save.connect(update_item, Like)
+signals.post_save.connect(update_item, ProductView)
+signals.post_save.connect(update_item, Download)
+signals.post_save.connect(update_item, Endosement)

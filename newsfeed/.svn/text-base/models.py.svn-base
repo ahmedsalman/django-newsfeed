@@ -1,0 +1,43 @@
+from datetime import datetime
+
+
+from iTest.base.models import TimeStampAwareModel
+
+
+from django.contrib.auth.models import User
+from django.db import models
+
+# Create your models here.
+
+# user id broadcom unique
+
+# email
+
+class AceProfile( TimeStampAwareModel ):
+
+    profile_owner = models.ForeignKey( User ) ##this will come from EPS, ePRO, IPX user model
+
+    ace_personnel_key           = models.PositiveIntegerField( "Primary Location Key", max_length = 30 , blank = True, null = True)
+    ace_personnel_id            = models.CharField( "ACE Personnel_ID" , max_length = 50 , blank = True, null = True)
+    personnel_type_code         = models.CharField( "Personnel Type Code" , max_length = 3 , blank = True, null = True)
+    title                       = models.CharField( "Title" , max_length = 100  , blank = True, null = True)
+    business_phone              = models.CharField( "Business_Phone" , max_length = 100  , blank = True, null = True)
+    primary_location_key        = models.PositiveIntegerField( "Primary Location Key", max_length = 30 , blank = True, null = True)
+    company_code                = models.CharField( "Company Code" , max_length = 50 , blank = True, null = True)
+    company_name                = models.CharField( "Company Name" , max_length = 50 , blank = True, null = True)
+    employee_no                 = models.CharField( "Employee No" , max_length = 15 , blank = True, null = True)
+    job_class_code              = models.CharField( "Job Class Code" , max_length = 15 , blank = True, null = True)
+    supervisor_key              = models.PositiveIntegerField( "Supervisor Key" , max_length = 30 , blank = True, null = True)
+    supervisor_name             = models.CharField( "Supervisor Name" , max_length = 50 , blank = True, null = True)
+    dept_no                     = models.CharField( "Dept No" , max_length = 50 , blank = True, null = True)
+    personnel_status            = models.CharField( "Personnel Status" , max_length = 3 , blank = True, null = True)
+    acct_name                   = models.CharField( "Acct Name" , max_length = 50 , blank = True, null = True)
+
+
+    class Meta:
+        verbose_name = 'Profile'
+        verbose_name_plural = 'Profile'
+
+    def __unicode__(self):
+        return u'%s' % (self.profile_owner.username)
+

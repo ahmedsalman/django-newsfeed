@@ -1,0 +1,48 @@
+{% extends "DFT/base.html" %}
+
+{% block help %}
+<li><a href="http://confluence.broadcom.com/display/iTest/Cover+Page"><i class="icon-cog"></i> Help </a></li>
+{% endblock %}
+
+
+{% block left_side_bar %}
+        <!-- Left side bar item -->
+            {% if user_device_list %}
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle">Devices</a>
+                    </div>
+                </div>
+
+                {% for user_device_histroy_obj in user_device_list %}
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" href="{% url device_information user_device_histroy_obj %}">{{user_device_histroy_obj}}</a>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endif %}
+{% endblock %}
+
+
+
+    {% block content %}
+
+            {% for stream_item in stream_item_list %}
+                {{ stream_item.get_rendered_html }}
+            {% endfor %}
+        </div>
+    {% endblock %}
+
+
+
+
+
+{% block extra_body %}
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!--<script src="{{ STATIC_URL }}js/generic/jquery.js"></script>-->
+<!--<script src="{{ STATIC_URL }}js/generic/bootstrap-collapse.js"></script>-->
+<link rel="stylesheet" type="text/css" href="/static/css/generic/newsfeed_style.css" />
+{% endblock %}

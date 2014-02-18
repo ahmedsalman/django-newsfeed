@@ -1,0 +1,6 @@
+from base.models import *
+from django.contrib import admin
+
+
+admin.site.register(IPartNumber)
+admin.site.register(Device)

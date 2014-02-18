@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/ITEST_CONTRACTOR/!svn/ver/227/trunk/iTest/aceprofile
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/ITEST_CONTRACTOR/!svn/ver/227/trunk/iTest/aceprofile/models.py
+END
+admin.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ITEST_CONTRACTOR/!svn/ver/227/trunk/iTest/aceprofile/admin.py
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ITEST_CONTRACTOR/!svn/ver/227/trunk/iTest/aceprofile/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ITEST_CONTRACTOR/!svn/ver/227/trunk/iTest/aceprofile/__init__.py
+END
+tests.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/ITEST_CONTRACTOR/!svn/ver/227/trunk/iTest/aceprofile/tests.py
+END
